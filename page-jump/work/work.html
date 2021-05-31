@@ -9,9 +9,18 @@
   <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
   <!-- vue-router，動的リンクを生成するやつ -->
   <script src="https://unpkg.com/vue-router@3.0.7/dist/vue-router.js"></script>
+
 </head>
 <body>
-  <div><a href="../index.html">aaa</a></div>
+  <div id="app">
+    <router-link to="work.html">WORK</router-link>
+    <router-link to="../index.html">INDEX</router-link>
+    <router-link to="../index.html#h1">1</router-link>
+    <router-link to="../index.html#h2">2</router-link>
+    <router-link to="../index.html#h3">3</router-link>
+
+    <router-view></router-view>
+  </div>
 
   <script src="../script.js"></script>
 </body>
