@@ -1,3 +1,5 @@
+// はじめに
+
 // 0. モジュールシステムを使っている場合 (例: vue-cli 経由で)、Vue と VueRouter をインポートし、`Vue.use(VueRouter)` を呼び出します。
 
 // 1. ルートコンポーネントを定義します
@@ -30,3 +32,21 @@ const app = new Vue({
 }).$mount('#app')
 
 // これで開始です!
+
+
+
+// 動的ルートマッチング
+const router = new VueRouter({
+  routes: [
+    // コロンで始まる動的セグメント
+    { path: '/user/:id', component: User }
+  ]
+})
+
+const User = {
+  template: '<div>User {{ $route.params.id }}</div>'
+}
+
+const app = new Vue({
+  router
+}).$mount('#app')
